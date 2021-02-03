@@ -9,14 +9,16 @@ class Pessoa:
 
 
 if __name__ == '__main__':
-    marcos = Pessoa(nome='Marcos')
-    dihl = Pessoa(marcos, nome='Dihl')
-    print(Pessoa.cumprimentar(dihl))
-    print(id(dihl))
-    print(dihl.cumprimentar())
-    print(dihl.nome)
-    print(dihl.idade)
-    for filho in dihl.filhos:
+    renzo = Pessoa(nome='Renzo')
+    luciano = Pessoa(renzo, nome='Luciano')
+    print(Pessoa.cumprimentar(luciano))
+    print(id(luciano))
+    print(luciano.cumprimentar())
+    print(luciano.nome)
+    print(luciano.idade)
+    for filho in luciano.filhos:
         print(filho.nome)
-
-    print(dihl.filhos)
+    luciano.sobrenome = 'Ramalho'
+    del luciano.filhos
+    print(luciano.__dict__)
+    print(renzo.__dict__)
