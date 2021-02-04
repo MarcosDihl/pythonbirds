@@ -20,7 +20,7 @@ O   L
   S
 
     Exemplo:
-    >>># Testando motor
+    >>> # Testando motor
     >>> motor = Motor()
     >>> motor.velocidade
     0
@@ -80,22 +80,19 @@ O   L
    >>>carro.calcular_velocidade()
    0
    >>> carro.calcular_direcao()
-   >>> 'Norte'
+   'Norte'
    >>> carro.girar_a_direita()
    >>> carro.calcular_direcao()
-   >>> 'Leste'
+   'Leste'
    >>> carro.girar_a_esquerda()
    >>> carro.calcular_direcao()
-   >>> 'Norte'
+   'Norte'
    >>> carro.girar_a_esquerda()
    >>> carro.calcular_direcao()
-   >>> 'Oeste'
+   'Oeste'
 """
 # Composição é a interação entre diferentes objetos, que podem ser inclusive de diferentes classes
 
-a = 1
-b = 2
-soma = a + b
-
-print(soma)
+class Motor:
+    pass
 
