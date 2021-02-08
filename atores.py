@@ -99,7 +99,18 @@ class Passaro(Ator):
 
         :return: booleano
         """
-        return True
+        #if self._tempo_de_lancamento is None:
+            #return False
+        #else:
+            #return True
+
+        # ou pode fazer de forma mais simples e direta:
+        #if self._tempo_de_lancamento is None:
+            #return False
+        #return True
+
+        # ou pode fazer de forma diferente por ser uma expressão booleana:
+        return not self._tempo_de_lancamento is None
 
     def colidir_com_chao(self):
         """
@@ -135,7 +146,8 @@ class Passaro(Ator):
         :param tempo_de_lancamento:
         :return:
         """
-        pass
+        self._angulo_de_lancamento = angulo
+        self._tempo_de_lancamento = tempo_de_lancamento
 
 
 class PassaroAmarelo(Passaro):
